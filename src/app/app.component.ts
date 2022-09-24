@@ -1,12 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './core/components/header/header.component';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>',
+  template: `
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  `,
   standalone: true,
-  imports: [CommonModule, RouterModule]  
+  imports: [CommonModule, RouterModule, HeaderComponent]  
 })
 export class AppComponent {
   title = 'Angular-v14-features';
