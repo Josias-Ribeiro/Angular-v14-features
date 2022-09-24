@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { getRoutParams } from 'src/app/core/components/header/helpers/get-route-params';
 
 @Component({
   selector: 'app-sobre',
@@ -15,9 +16,13 @@ public form = this._formBuilder.group({
   password: ['']
 })
 
+public id = getRoutParams
+
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
+
+  
 
 }
